@@ -61,6 +61,37 @@ This will run [Babel](https://babeljs.io) on `VerbalExpressions.js` and output t
 
 A source map will also be created in `dist`, so you can use the original "un-babelified", unminified source file for debugging purposes.
 
+## Building the docs/ folder
+
+The `docs/` folder uses Jekyll for building the static HTML and is hosted at
+gh-pages.
+
+To install the Ruby dependencies, run:
+
+```
+cd docs/
+bundle install
+```
+
+This installs all needed Ruby dependencies locally
+
+After you've installed dependencies, you can run:
+
+```
+bundle exec jekyll build
+```
+
+This builds all static files to `docs/_site/` folder.
+
+If you want to develop the files locally, you can run:
+
+```
+bundle exec jekyll serve
+```
+
+This starts a local development web server and starts watching your files for
+changes.
+
 ## API documentation
 
 You can find the API documentation at [verbalexpressions.github.io/JSVerbalExpressions](https://verbalexpressions.github.io/JSVerbalExpressions). You can find the source code for the docs in [`docs`](docs/).
@@ -141,8 +172,8 @@ Check out these slide decks for handy Github & git tips:
 
 ## Tools
 
-- https://verbalregex.com - it's a wrapper of JSVerbalExpressions; users can write down the code and compile to regex
-- https://jsbin.com/metukuzowi/edit?js,console - JSBin Playground
+- <https://verbalregex.com> - it's a wrapper of JSVerbalExpressions; users can write down the code and compile to regex
+- <https://jsbin.com/metukuzowi/edit?js,console> - JSBin Playground
 
 ## Other Implementations
 
@@ -162,3 +193,11 @@ You can see an up to date list of all ports on [VerbalExpressions.github.io](htt
 - [Swift](https://github.com/VerbalExpressions/SwiftVerbalExpressions)
 
 If you would like to contribute another port (which would be awesome!), please [open an issue](https://github.com/VerbalExpressions/implementation/issues/new) specifying the language in the [VerbalExpressions/implementation repo](https://github.com/VerbalExpressions/implementation/issues). Please don't open PRs for other languages against this repo.
+
+### Similar projects
+
+Here's a list of other similar projects that implement regular expression
+builders:
+
+- https://github.com/MaxArt2501/re-build
+- https://github.com/mathiasbynens/regenerate
